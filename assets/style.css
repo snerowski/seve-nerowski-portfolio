@@ -1,9 +1,12 @@
+/* Added a basic root and three colors for the entire page to make the styling easier. Used a color generator on web3. */
+
 :root {
     --main: #4dff4d;
     --backup: #8080ff;
     --accent: #ff6666;  
 }
 
+/* Added a univeral selector and changed these three properties to remove the default origins of the entire stylesheet */
 
 * {
     margin: 0;
@@ -11,6 +14,7 @@
     box-sizing: border-box;
 }
 
+/* Targeted the entire body of the webpage and changed the font, color, and background color to just some simple colors. */
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -18,6 +22,8 @@ body {
     background-color: var(--backup);
 
 }
+/* Header Section. Set the background color for the entire section, then set all of the boxes to flex and space between so that they they are spaced evenly across the section.
+    Added flex-wrap here so that as the window adjusts the h1 content moves below the header div content.*/
 
 header {
     background-color: var(--backup);
@@ -26,42 +32,48 @@ header {
     flex-wrap: wrap;
     padding: 20px;
 }
+/* created a box shadow for the div element around my name to add some pop to page. */
 
 header div {
-    box-shadow: 3px 3px 5px rgba(red, green, blue, alpha);
+    box-shadow: 3px 3px 5px;
 }
+/* targeted the h1 element within the header and set the font size according to what looks best on the page. I also added the color and border for my box shadow here. */
 
 header h1 {
     color: var(--main);
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     background-color: var(--backup);
     padding: 10px;
-    border: 5px solid var(--accent);
+    border: 5px solid var(--accent);    
 }
+/* Default had all of my a tags set with an underline, added text-decoration:none to remove that. Set the color so the text was not hidden by the background-color */
 
 header a{
     text-decoration: none;
     color: var(--main);
 }
+/* targeted the nav and li tags to remove the periods with list-style:none */
 
 header nav ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     list-style: none;
 }
 
 header nav {
     margin: 20px;
 }
+/* Targeted each link in the header in order to space each box evenly across the right side of the header. */
 
 header nav ul li a {
-    padding: 8px;
-    font-size: 28px;
+    padding: 18px;
+    font-size: 38px;
     margin: 20px 20px 0 0;
     font-weight: bold;
 }
+/* Targeted just the nav tag (as well as all of the content within it) and added a hover effect so that when the cursor moves over each one it changes the backgrond 
+    and text color. ALso added a border radius to all of them so background is rounded. Just though that they looked neater this way.  */
 
 header nav ul li a:hover {
     background: var(--accent);
@@ -69,7 +81,7 @@ header nav ul li a:hover {
     border-radius: 35px;
 }
 
-
+/* Hero Section. Targeted the entire class and set all of the content to fit what the challenge example looked like for the most part. Also added a background image.  */
 
 .hero {
     background-image: url("../assets/hero-image.jpg");
@@ -80,12 +92,14 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: space-around;
 }
+/* This is the picture of myself I added. Added a border-radius to make it look a bit cleaner. */
 
 .hero img  {
     height: 400px;
     margin-right: 900px;
     border-radius: 15px;
 }
+/* Targeted the short bio I wrote and made it look as neat as possible on the background image. */
 
   .hero .hero-text {
     font-size: 35px;
@@ -100,6 +114,7 @@ header nav ul li a:hover {
     font-size: 48px;
 }
 
+/* Targeted the title classes of each title to set a border between the titles and content of the sections. */
 
 .title {
     border-right: 5px solid var(--accent);
@@ -113,6 +128,7 @@ header nav ul li a:hover {
 .title h2 {
     font-size: 48px;
 }
+/* About Me section. Just made everything look neat with in the section. */
 
 .about-me {
     display: flex;
@@ -129,10 +145,13 @@ header nav ul li a:hover {
     width: 90%;
     color: var(--main);
 }
+/* this span was only used to italicize the movie title I included in my paragraph */
 
 .about-me span {
     font-style: italic;
 }
+
+/* My work section. */
 
 .my-work {
     padding: 30px 0;
@@ -145,14 +164,18 @@ header nav ul li a:hover {
     color: var(--main)
 }
 
-.project-grid-flexbox {
+/* Created a grid in the section just like the challenge example image. This portion of code just sets all of the boundaries that I wanted for the entire My Work section. */
+
+.project-grid-mywork {
     width: 70%;
     height: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    margin-right: 230px ;
 }
+/* Here is where I actually created the grid within the section to stage where I put each individual project in. */
 
-.projects-flexbox {
+.projects-mywork {
     width: 70%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -160,21 +183,28 @@ header nav ul li a:hover {
     gap: 10px;
 }
 
+/* In the html file I put a space between project and each project-number. That way here I could target all of the boxes within my grid and create borders around them all.
+    Changed the color of the borders, and added opacity just like the challenge example image. */
+
 .project {
     border: solid;
-    color: black;
+    color: var(--main);
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     text-decoration: none;
     background-size: cover;
     background-position: center;
-    opacity: 0.85;
+    opacity: 0.65;
 }
+
+/* added the hover so when the cursor moves over any of the projects it removes the opacity. */
 
 .project:hover {
     opacity: 1.0;
 }
+
+/* Here is where I targeted each individual project and added background images for them all */
 
 .number-1 {
     grid-column: 1/3;
@@ -192,7 +222,7 @@ header nav ul li a:hover {
 
 .number-4 {
     background-image: url(../assets/project-4.jfif);
-    background-position: 0% 60%;
+    
 }
 
 .number-5 {
@@ -206,7 +236,7 @@ header nav ul li a:hover {
     padding: 1px;
 }
 
-
+/* Footer Section. It is almost identical to the header section.  */
 footer {
     display: flex;
     justify-content: space-between;
@@ -251,6 +281,7 @@ footer ul li a:hover {
     color: var(--backup);
     border-radius: 35px;
 }
+/* Here is where I added all of the code for my custom so that portfolio adapts when the page is resized or used on various devices it adapts. */
 
 @media  screen and (max-width: 768px) {
     .hero .hero-text {
@@ -308,12 +339,12 @@ footer ul li a:hover {
         padding: 30px 0;
     }
 
-    .project-grid-flexbox {
+    .project-grid-mywork {
         width: 100%;
         padding: 10px;
     }
 
-    .projects-flexbox {
+    .projects-mywork {
         width: 80%;
     }
 
