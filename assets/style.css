@@ -1,7 +1,7 @@
 :root {
-    --main:#006600;
-    --backup:#000066;
-    --accent: #b30000;  
+    --main: #4dff4d;
+    --backup: #8080ff;
+    --accent: #ff6666;  
 }
 
 
@@ -72,7 +72,7 @@ header nav ul li a:hover {
 
 
 .hero {
-    background-image: url("../assets/rusty-car.jpg");
+    background-image: url("../assets/hero-image.jpg");
     height: 600px;
     background-size: cover;
     background-position: center;
@@ -85,14 +85,14 @@ header nav ul li a:hover {
     height: 400px;
     margin-right: 900px;
     border-radius: 15px;
-    
 }
+
   .hero .hero-text {
     font-size: 35px;
     display: flex;
     justify-content: end;
     text-align: right;
-    color: var(--main);
+    color: var(--accent);
     
 }
 
@@ -170,7 +170,6 @@ header nav ul li a:hover {
     background-size: cover;
     background-position: center;
     opacity: 0.85;
-    border-radius: 40px;
 }
 
 .project:hover {
@@ -184,13 +183,11 @@ header nav ul li a:hover {
     }
 
 .number-2 {
-    background-image: url(../assets/project-2.jfif);
-    background-position: 10% 20%;
+    background-image: url(../assets/project-2.jfif);   
 }
 
 .number-3 {
-    background-image: url(../assets/project-3.jfif);
-    background-position: 10% 20%;    
+    background-image: url(../assets/project-3.jfif);    
 }
 
 .number-4 {
@@ -200,7 +197,6 @@ header nav ul li a:hover {
 
 .number-5 {
     background-image: url(../assets/project-5.jfif);
-    background-position: 10% 50%;
 
 }
 
@@ -209,6 +205,7 @@ header nav ul li a:hover {
     color: var(--main);
     padding: 1px;
 }
+
 
 footer {
     display: flex;
